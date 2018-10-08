@@ -1,0 +1,21 @@
+
+<h1> {{ pageHeader }}</h1>
+
+
+<ul>
+    <li>
+        <input type="text" id="searchComponent" [(ngModel)]="searchText" placeholder="search text goes here">
+      </li>
+  <li *ngFor="let searchCharacters of characters  | grdFilter: {name: searchText, id: searchText, username: searchText, email: searchText}">
+    {{ searchCharacters.id }}  ,  {{ searchCharacters.name }} , {{ searchCharacters.username }}  ,  {{ searchCharacters.email }}
+  </li>
+</ul>
+
+<ul>
+
+  <li *ngFor="let post of posts$ | grdFilter:{name: searchText}">
+    <a routerLink="">{{ post.title }}</a>
+
+    <p>{{ post.body }}</p>
+  </li>
+</ul>

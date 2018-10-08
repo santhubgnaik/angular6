@@ -1,0 +1,36 @@
+<h1>{{ titleOfTwayDatabinding }}</h1>
+
+<!-- <ul>
+  <li>santhu</li>
+</ul> -->
+
+<!-- <input disabled="false" id="{{ myId }} " type='text' value="Two way Data binding" /><br><br>
+<input disabled="{{ false }} " id="{{ myId }} " type='text' value="Two way Data binding" /><br><br>
+<input [disabled]="false" id="{{ myId }} " type='text' value="Two way Data binding" /><br><br>
+<input [disabled]="true" id="{{ myId }} " type='text' value="Two way Data binding" /><br><br>
+
+ binding using class
+<input [disabled]="isDisabled" id="{{ myId }} " type='text' value="Two way Data binding with class" /><br><br> -->
+
+<ul>
+  <!-- Two Way Binding -->
+  <li>
+      Type Your Inputs <input [(ngModel)]="myName" type="text">
+
+    </li>
+    <li> {{ myName }}</li>
+
+  <li>
+    <input [id]="myId" type='text' value="Two way Data binding" /><br><br>
+    <input bind-disabled="isDisabled" id="{{ myId }} " type='text' value="Two way Data binding with class" /><br><br>
+      <h1 class="text-success">Two Way Data Binding </h1>
+      <h1 [class]="text-success">Two Way Data Binding </h1>
+      <h1 class="text-specia" [class]="text-success">Two Way Data Binding </h1>
+      <h1 [class.text-specia]= hasClass [class]="text-success">Two Way Data Binding </h1>
+
+
+  </li>
+
+
+</ul>
+

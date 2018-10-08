@@ -1,0 +1,23 @@
+<h1> {{ pageName }}</h1>
+
+<h1> {{ 2+2 }} </h1>
+ <h1> {{ 'Welcome ' + pageName }} </h1>
+ <h1> {{ pageName.length }} </h1>
+ <h1> {{ pageName.toUpperCase() }} </h1>
+ <h1> {{ sampleExample() }} </h1>
+<h1> {{ siteUrl }} </h1>
+
+
+<h1>Event Binding Examples </h1>
+<button (click)="clickEvent()">Event Binding Click</button>
+
+<h1> {{ clickEventDatabinding }} </h1>
+
+<button (click)="clickCapture($event)">click Capture</button>
+
+<!-- <button (click)="clickCapture='Hello Santhu'">Santhu</button>
+{{clickCapture}} -->
+<br>
+<!-- template referance variables -->
+<input #myInput type="text"><br>
+<button (click)="logMessage(myInput.value)"> Log Message</button>

@@ -1,0 +1,92 @@
+1. What Angular ?
+  angular is a framework it use to build client side application  and it is greate to build single page application, parts of the views load asynchronouslly without reloading enter the page
+Why Angular ?
+  by design angular promtes Modular approch and the clear strucher
+   reusable code
+   Development Quicker and faster
+   validating
+   routing
+   unittesting
+   typescript es6 es5 support
+
+NodeJS
+NPM
+Angular Cli : Command Line Interface
+
+npm install - g @angular/cli
+code. : for opening vs code
+
+create a project : ng new sampleApplication
+Start the Application : ng serve
+
+ng g c homePage
+ng g service sampleService
+
+
+Modules : Modules is a collections of meney induseal modules
+Root MOdule is App.component
+all components nested inside the component
+
+Architecture Summary of angular
+  ANgular App- One or More ModulesModule - One or More components and Services
+  Components  - HTML + Class
+  Services: Business Logic
+  Modles interact and ultimately render the view in the browser
+
+
+Package.js : Depandance of all application
+main.ts : main.ts is the main enterey point of the angular application
+
+app.module.ts : is the root component of the application
+bootstrap : kick start the application
+
+
+component :
+
+import { Component, OnInit} from '@angular/core';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+
+  export class AppComponent implements OnInit {
+
+    constructor(private navigationdata: NavigationService) { }
+
+    ngOnInit() {
+      });
+
+  }
+}
+
+
+1. What is Component  :
+  template
+  class : code that's support the code
+  component has the matadat ( information )
+
+  Template    =>     Class =>            Metadata
+  view               code                Information
+  HTML               typescript          Decoretor
+                     Data and Methods
+
+<app-root></app-root> : app-root selector is rendring the application
+
+
+<h2> {{ 2 + 2 }} </h2>
+<h2> {{ 'Template Name ' + name  }} </h2>
+<h2> {{ name .length }} </h2>
+<h2> {{ name .toUpperCase }} </h2>
+<h2> {{ name .length }} </h2>
+<h2> {{ name .length }} </h2>
+
+
+
+export class TestComponent implemention OnInit {
+  public siteUrl = window.location.href;
+}
+
+
+// Property Binding ?
+

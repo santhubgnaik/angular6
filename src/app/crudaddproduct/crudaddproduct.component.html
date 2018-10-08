@@ -1,0 +1,14 @@
+<ul class="addProductWrapper">
+  <li>
+    <a routerLink = "/crud"> Back</a>
+    <h1>Add New Product</h1>
+
+    <form id="formNewProduct" name="formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+      <label for="">Name : </label> <input type="text" name="name" id="name" placeholder="name" ngModel><br>
+      <label for="">Color : </label> <input type="text" name="color" id="color" placeholder="color" ngModel><br>
+      <input type="submit" value="Add Product" id="addProductBtn">
+    </form>
+    <br>
+    <h3 *ngIf="isAdded"> {{ confirmationString }}  </h3>
+  </li>
+</ul>

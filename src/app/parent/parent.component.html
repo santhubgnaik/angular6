@@ -1,0 +1,9 @@
+<ul>
+  <li>
+    <h2> {{ parentMessage }} </h2>
+  </li>
+  <li>
+      <app-child (messageEvent)="reciveMessage($event)"></app-child>
+  </li>
+  <li> {{ chaildMessage }} </li>
+</ul>

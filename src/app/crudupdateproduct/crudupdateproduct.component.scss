@@ -1,0 +1,38 @@
+input#name, input#color {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #00a8ff;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+input#updateProductBtn {
+  padding: 10px 40px;
+  border: 1px solid #bad7e6;
+  border-radius: 5px;
+  margin: 10px;
+  background: #00a8ff;
+  color: #fff;
+}
+
+form#formNewProduct {
+  text-align: center;
+}
+
+.updateProductWrapper h1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00A8FF;
+}
+#formNewProduct label {
+  font-size: 1em;
+  font-weight: bold;
+  color: #00A8FF;
+}
+
+.updateProductWrapper h3 {
+  text-align: center;
+  font-size: 14px;
+  color: #1eab1e;
+}

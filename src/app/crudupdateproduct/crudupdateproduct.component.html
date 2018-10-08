@@ -1,0 +1,15 @@
+<ul class="updateProductWrapper">
+    <li>
+      <!-- <a routerLink = "/crud"> Back</a> -->
+      <h1>Update Product</h1>
+      <p *ngIf="!exist">
+        Product Doesn't Exist !
+      </p>
+
+      <form id="formNewProduct" name="formNewProduct" #productData = "ngForm" (ngSubmit) = "updateProduct(productData.value)">
+        <label for="">Name : </label> <input type="text" name="name" id="name" placeholder="name" [(ngModel)] = "data.name" ngModel><br>
+        <label for="">Color : </label> <input type="text" name="color" id="color" [(ngModel)] = "data.color" placeholder="color" ngModel><br>
+        <input type="submit" value="Update Product" id="updateProductBtn">
+      </form>
+    </li>
+  </ul>

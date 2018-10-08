@@ -1,0 +1,43 @@
+<ul class="crudAppHeader">
+  <li>{{ crudAppHeader }}</li>
+</ul>
+<ul>
+  <li>{{ crudAppHeader }}</li>
+</ul>
+
+
+<!--  -->
+<ul>
+  <li>
+      <a routerLink="/product">+ Add Product</a>
+  </li>
+</ul>
+<ul>
+  <li>
+
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">ID </th>
+              <th scope="col">Name</th>
+              <th scope="col">Color</th>
+              <th scope="col">Delete</th>
+              <th scope="col">Update</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr *ngFor= "let myProducts of products" [myProducts] = "myProducts"> -->
+              <tr *ngFor= "let myProducts of products">
+              <td> {{ myProducts.id }}</td>
+              <td> {{ myProducts.name }}</td>
+              <td> {{ myProducts.color }}</td>
+              <td (click) = "deleteProducts(myProducts.id)"><a>Delete</a></td>
+              <!-- <td><a routerLink="/product">+ Add Product</a></td> -->
+              <!-- <td><a routerLink="/updateProduct/[{{myProducts.id}}]">Update</a></td> -->
+              <td [routerLink] = "['/updateProduct', myProducts.id]"><a>Update</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+  </li>
+</ul>

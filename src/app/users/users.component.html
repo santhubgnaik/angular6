@@ -1,0 +1,18 @@
+<h1>Users List </h1>
+<ul>
+  <li *ngFor="let myUser of users$">
+      <a routerLink="/details/{{myUser.id}}">{{ myUser.name }}</a>
+      <!-- <a>{{ myUser.name }}</a> -->
+    <ul>
+      <!-- <li> {{ myUser.id }} </li> -->
+      <li> {{ myUser.username }} </li>
+      <li> {{ myUser.email }} </li>
+      <!-- <li><a href="http://{{ user.website }}">{{ myUser.website }}</a></li> -->
+      <!-- <li> {{ myUser.address }} </li> -->
+      <li>
+          <!-- <a href="http://{{ myUser.website }}">{{ myUser.website }}</a> -->
+      </li>
+    </ul>
+    </li>
+</ul>
+
